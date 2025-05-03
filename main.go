@@ -40,14 +40,11 @@ type Product struct {
 }
 
 func main() {
-	fmt.Println(os.Getenv("POSTGRES_DB"))
-	fmt.Println(databaseName)
 	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+
 		"password=%s dbname=%s sslmode=disable",
 		host, port, username, password, databaseName)
 
 	sdb, err := sql.Open("postgres", psqlInfo)
-	fmt.Println(psqlInfo)
 	if err != nil {
 		// fmt.Println("failed1")
 		log.Fatal(err)
