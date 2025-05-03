@@ -59,26 +59,15 @@ func main() {
 		log.Fatal(err)
 	}
 
-	// Connection Database Successfull
+	// * Connection Database Successfull
 	fmt.Println("Connection Database Successfull")
 
-	err = createProduct(&Product{Name: "Go product3", Price: 700})
+	product, err := getProduct(8)
+	fmt.Println("Get Successfull!", product)
 
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	fmt.Println("Create Successfull!")
-}
-
-func createProduct(product *Product) error {
-	//INSERT INTO public.products(id, name, price) VALUES (?, ?, ?);
-
-	_, err := db.Exec(
-		"INSERT INTO public.products(name, price) VALUES ($1, $2);",
-		product.Name,
-		product.Price,
-	)
-
-	return err
 }
