@@ -11,7 +11,4 @@ POSTGRES_PASSWORD=your_postgres_password
 # 🛠️ PGAdmin Configuration
 PGADMIN_DEFAULT_EMAIL=admin@example.com
 PGADMIN_DEFAULT_PASSWORD=your_pgadmin_password
-
-# 🔐 Authentication
-JWT_SECRET_KEY=your_jwt_secret_key
 ```
