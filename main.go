@@ -65,7 +65,7 @@ func main() {
 
 	app := fiber.New()
 
-	// * Connection Database Successfull
+	// * Connection Database Successfull // TEST // TESTING FEATURE
 	fmt.Println("Connection Database Successfull")
 
 	app.Get("/product/", getProductsHandler)
@@ -75,7 +75,7 @@ func main() {
 	app.Delete("/product/:id", deleteProductHandler)
 
 	app.Listen(":8080")
-
+	// Testing main // Try pull request
 }
 
 func getProductHandler(c *fiber.Ctx) error {
