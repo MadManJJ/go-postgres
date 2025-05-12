@@ -65,7 +65,7 @@ func main() {
 
 	app := fiber.New()
 
-	// * Connection Database Successfull // TEST
+	// * Connection Database Successfull // TEST // TESTING FEATURE
 	fmt.Println("Connection Database Successfull")
 
 	app.Get("/product/", getProductsHandler)
