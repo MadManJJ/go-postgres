@@ -75,7 +75,7 @@ func main() {
 	app.Delete("/product/:id", deleteProductHandler)
 
 	app.Listen(":8080")
-
+	// Testing main
 }
 
 func getProductHandler(c *fiber.Ctx) error {
